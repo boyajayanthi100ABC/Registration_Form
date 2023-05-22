@@ -1,0 +1,45 @@
+/* Write your CSS code here */
+
+body {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  color: #ea580c;
+  font-family: 'Bree Serif';
+  font-size: 24px;
+}
+
+.form-container {
+  box-shadow: 0px 4px 16px 0px;
+  width: 400px;
+  padding: 40px;
+  margin: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.br {
+  margin: 10px;
+}
+
+.input-cont {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #ea580c;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
