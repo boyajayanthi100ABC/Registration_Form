@@ -53,10 +53,25 @@ class RegistrationForm extends Component {
     )
   }
 
+  validateLastName = () => {
+    const {lastName} = this.state
+
+    return lastName !== ''
+  }
+
+  validateFirstName = () => {
+    const {firstName} = this.state
+
+    return firstName !== ''
+  }
+
   onSubmitForm = event => {
     event.preventDefault()
 
     const {firstName, lastName, reqExtStart, reqExtLast} = this.state
+
+    const isValidFirstName = this.validateFirstName()
+    const isValidLastName = this.validateLastName()
 
     if (firstName && lastName) {
       this.setState({successMsg: true, reqExt: false})
@@ -141,7 +156,7 @@ class RegistrationForm extends Component {
         <br />
         {reqExtLast && <p> Required </p>}
         <br />
-        <button type="button" className="button">
+        <button type="submit" className="button">
           Submit
         </button>
       </form>
